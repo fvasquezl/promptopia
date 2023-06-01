@@ -22,7 +22,3 @@ export const connectToDB = async () => {
         console.log(error)
     }
 }
-
-
-// vasquezlimon
-// pb3KpbvM1hptkqWJ
