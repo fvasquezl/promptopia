@@ -9,7 +9,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 			<p className="desc text-left max-w-md">
 				{type} and share amazing propts with the world, and let your imaginatio run wild with any AI-powered platform
 			</p>
-			<form onSubmit={handleSubmit} className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
+			<form onSubmit={handleSubmit}
+				className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
 			>
 				<label>
 					<span className="font-satoshi font-semibold text-base text-gray-700">Your AI Prompt</span>
