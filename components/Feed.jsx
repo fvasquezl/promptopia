@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react"
 
@@ -8,13 +8,14 @@ const PromptCardList = ({ data, handleTagClick }) => {
 	return (
 		<div className="mt-16 prompt_layout">
 
-			{data.map[(post) => (
+			{data.map((post) => (
 
 				<PromptCard
 					key={post._id}
 					post={post}
-					handleTagClick={handleTagClick} />
-			)]}
+					handleTagClick={handleTagClick}
+				/>
+			))}
 		</div>
 	)
 }
@@ -32,14 +33,15 @@ const Feed = () => {
 			const data = await response.json()
 			setPosts(data)
 		}
-		console.log(posts)
+
 		fetchPosts()
 	}, [])
 
 	return (
 		<section className="feed">
 			<form className="relative w-full flex-center" >
-				<input type="text"
+				<input
+					type="text"
 					placeholder="Search for a tag or username"
 					value={searchText}
 					onChange={handleSearchChange}

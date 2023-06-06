@@ -5,7 +5,8 @@ import Image from "next/image"
 import { useSession } from "next-auth/react"
 import { usePathname, useRouter } from "next/navigation"
 
-const PromptCard = ({ post, hanleTagClick, handleEdit, handleDelete }) => {
+const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
+
 	return (
 		<div className="prompt_card">
 			<div className="flex justify-between items-start gap-5">
@@ -13,16 +14,18 @@ const PromptCard = ({ post, hanleTagClick, handleEdit, handleDelete }) => {
 					<Image
 						src={post.creator.image}
 						alt="user_image"
-						with={40}
+						width={40}
 						height={40}
-						className="rounded-full object-contain" />
-
+						className="rounded-full object-contain "
+					/>
 					<div className="flex flex-col">
-						<h3>{post.creator.username}</h3>
-						<p>{post.creator.email}</p>
+						<h3 className="font-satoshi font-semibold text-gray-900">
+							{post.creator.email}
+						</h3>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	)
 }
